@@ -13,9 +13,6 @@
         "psr-4": {
             "Surest\\CoreHyperfSdk\\": "src"
         },
-        "files": [
-            "src/helper.php"
-        ]
     },
     "minimum-stability": "dev",
     "require": {
