@@ -25,12 +25,6 @@ class Profile
      */
     const induction = 3;
 
-    const events = [
-        self::register => 'register',
-        self::login => 'register',
-        self::induction => 'induction',
-    ];
-
     /**
      * 触发事件
      * @var string
@@ -58,6 +52,21 @@ class Profile
     }
 
     /**
+     * 获取有效事件
+     * User: surest
+     * DateTime: 2021/11/25 4:58 下午
+     * @return string[]
+     */
+    public function events()
+    {
+        return [
+            self::register => 'register',
+            self::login => 'register',
+            self::induction => 'induction',
+        ];
+    }
+
+    /**
      * 设置请求头
      * User: surest
      * DateTime: 2021/11/25 4:27 下午
@@ -77,7 +86,7 @@ class Profile
     {
         try {
             $this->event = $event;
-            $this->url = sprintf($this->url, Config::getConfig('version'), self::events[$this->event]);
+            $this->url = sprintf($this->url, Config::getConfig('version'), $this->events()[$this->event]);
         } catch (\Exception $exception) {
             throw new RequestException("event 【匹配的事件不存在】#333");
         }
