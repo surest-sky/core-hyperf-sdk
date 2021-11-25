@@ -20,7 +20,7 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.5",
-        "guzzlehttp/guzzle": "6.5.5"
+        "guzzlehttp/guzzle": "6.5"
     },
     "extra": {}
 }
