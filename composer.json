@@ -1,0 +1,26 @@
+{
+    "name": "surest/core-hyperf-sdk",
+    "description": "--",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "surest",
+            "email": "chenf@surest.cn"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Surest\\CoreHyperfSdk\\": "src"
+        },
+        "files": [
+            "src/helper.php"
+        ]
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.1.3",
+        "guzzlehttp/guzzle": "6.5.5"
+    },
+    "extra": {}
+}
